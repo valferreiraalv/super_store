@@ -8,11 +8,9 @@ Projeto de análise os pedidos de compra e insights para o área de negócio da 
 
 # 1. Contexto 
 
-A SuperStore é uma rede de supermercados com várias unidades físicas espalhadas por todo país, com o objetivo de fornecer alimentos e comercializar os mais diversos produtos para consumo. 
+A SuperStore é uma rede de supermercado com várias unidades físicas espalhadas por todo território, com o objetivo de fornecer alimentos e comercializar os mais diversos produtos para consumo. 
 
-O time de gerentes da SuperStore decidiu construir um time de dados para facilitar as decisões da empresa com relação ao abastecimento de produtos das lojas e também das vendas. Hoje, os gerentes têm acessos a algumas planilhas de dados com informações pontuais que ajudam nas decisões, mas eles gostariam que todos os dados da empresa fossem integrados de modo com que cada área acompanhasse os mesmos indicadores.
-
-O time de dados vai desempenhar um papel importante na criação desses indicadores da empresa, pois terão acesso aos dados transacionais para analisar o comportamento dos clientes, descrevendo os produtos que mais  compram, a quantidade comprada, o tamanho da cesta de compra, o valor médio de gasto em cada compra, os produtos devolvidos, os números de pedidos feitos dentro de um determinado tempo e assim por diante. 
+A necessidade é criar indicadores para a empresa a fim analisar o comportamento dos clientes e o fluxo de vendas dentro de um determinado período, gerar insights por meio de análise descritiva, análise de cohort para acompanhar a retenção de cliente e análise RFM para segmentar clientes para que a área de negócio realize novas ações para clientes e produtos. 
 
 Essas análises de dados geram insights que abrem espaço para entender como o negócio da empresa funciona do ponto de vista analítico, as razões de aumento ou diminuição dos números de pedidos, entre outras perguntas cuja resposta ajuda na tomada de decisão.
 
@@ -75,7 +73,7 @@ Essas análises vão gerar insights valiosos que permitirão à SuperStore enten
 <img src="images/matrix_cohort1.jpg" />
 </div>
 
-## Qual é a retenção de clientes ao longo dos meses? 
+## 3.1 Qual é a retenção de clientes ao longo dos meses? 
 
 A retenção analisada considera um intervalo de compras de 6 meses a partir do retorno do cliente no mês seguinte: 
 
@@ -93,16 +91,16 @@ A retenção analisada considera um intervalo de compras de 6 meses a partir do 
 
 De modo geral é possível identificar que poucos cohorts mantiveram picos de retenção ao longo dos 6 meses, sendo que fevereiro apresentou o melhor resultado de 17%. 
 
-## Quais cohorts apresentam maior e menor retenção? 
+## 3.2 Quais cohorts apresentam maior e menor retenção? 
 
 Considerando a média dos 6 meses após a primeira compra, é possível identificar que os cohorts que tiveram a maior retenção foram os de maio com 11%, agosto com 12% e setembro com 10%. 
 E quanto aos cohorts de menor retenção também com média dos 6 meses após a primeira compra, os meses de janeiro com 5% e março e dezembro com 7%. 
 
-## Existem fatores sazonais que impactam a retenção?
+## 3.3 Existem fatores sazonais que impactam a retenção?
 
 Pode haver fatores que impactam a sazonalidade como investimento em marketing, lançamento de produtos novos ou redução de preço, oferta de alguma promoção, porém não é possível afirmar que são ações que impactaram na retenção, esses podem ser alguns dos indicadores que mostram que os clientes compraram novamente.
 
-# Novo Problema de Negócio - Análise de RFM
+# 4. Novo Problema de Negócio - Análise de RFM
 
 Com o desenvolvimento da análise de Cohort, pelo time de dados para acompanhar a retenção dos clientes da rede e revelando números bons para alguns Cohorts e ruim para outros.
 
@@ -117,13 +115,13 @@ O seu próximo problema de negócio é criar uma segmentação de clientes e exp
 <img src="images/analise_RFM.jpg" />
 </div>
 
-## Quem são os “Campeõesˮ e “Clientes em Riscoˮ? 
+## 4.1 Quem são os “Campeõesˮ e “Clientes em Riscoˮ? 
 
 •	Campeões são caracterizados como clientes que compraram com alta frequência, gastam valores elevados (alta monetização) e fizeram compras recentemente (baixa recência), são segmentos de referência que representam o melhor comportamento possível dentro da base e servem como parâmetro para comparar com os demais. 
 
 •	Clientes em Risco aparecem quando a recência começa a aumentar (muito tempo sem comprar), mesmo tendo boa frequência ou monetização, são clientes que já compraram, podem ter sido bons clientes e estão em risco principalmente pelo tempo sem compra, podem evoluir para perdidos se nenhuma ação for tomada. 
 
-## Como os clientes estão distribuídos entre os segmentos RFM? 
+## 4.2 Como os clientes estão distribuídos entre os segmentos RFM? 
 
 Os clientes estão distribuídos em 11 segmentos representados na matriz de distribuição, sendo que o gráfico mostra a quantidade de clientes em cada segmento. Essa distribuição representa um diagnóstico da base atual e ao longo do tempo as proporções podem sofrer alterações de acordo com as ações do negócio, ou seja, segmentos menores podem crescer e os maiores podem diminuir de acordo com a eficácia das ações de retenção. 
 
@@ -138,7 +136,7 @@ Os grupos de clientes Precisam de Atenção (2%) e Risco (8%) requerem redução
 
 Sobre os segmentos mais distantes ou com menor monetização como Quase Dormente (4%), Promissores (1%), Hibernando (2%) e Perdidos (10%) pode ser realizada reativação ou avaliação de custo-benefício. 
 
-## Quais ações podem ser tomadas para fidelizar clientes ou recuperar os em risco? 
+## 4.3 Quais ações podem ser tomadas para fidelizar clientes ou recuperar os em risco? 
 
 Considerando o segmento Campeão, que pode ser considerado referência por possuir melhor recência (fizeram compras recentemente), alta monetização (apresentam gastos elevados) e boa frequência (tem grande quantidade de compras), algumas ações são relevantes para os demais clientes mudarem os status atual. 
 
@@ -150,13 +148,12 @@ Para o segmento Novos Clientes e Promissores que dispõe de baixa frequência e 
 
 Os segmentos Quase Dormentes, Precisam Atenção, Hibernando, Risco e Perdidos demandam como ação primária uma nova compra por apresentarem alta recência (fizeram suas compras há mais de 180 dias). 
 
+# 5. Novo Problema de Negócio - Desempenho de Produtos e Localizações
 
-# 4. Novo Problema de Negócio - Desempenho de Produtos e Localizações
-
-## Quais produtos geram maior receita e quais possuem baixo desempenho? 
+## 5.1 Quais produtos geram maior receita e quais possuem baixo desempenho? 
 
 <div align="center">
-<img src="images/1. faturamento_total.jpgg" />
+<img src="images/1. faturamento_total.jpg" />
 </div>
 
 O gráfico apresenta o faturamento total mensal ao longo do ano (jan a dez), com uma linha de tendência indicando pontos de crescimento neste período, no primeiro semestre há oscilação de valores iniciando com $94 mil em janeiro, seguido de queda para $59 mil em fevereiro sendo este o menor mês, março apresenta aumento significativo de $305 mil e em abril ocorre uma queda das vendas ficando estável até agosto, em setembro o valor de vendas aumenta para $307 mil, com nova queda relevante em outubro, o mês de novembro tem o maior valor do ano $362 mil e dezembro fecha com pequena queda com $325 mil. 
@@ -174,7 +171,7 @@ O gráfico mostra os produtos que geraram maior receita com os 10 itens de maior
 
 O gráfico mostra os produtos que geraram menor receita com os 10 itens de menor resultado, são valores muito baixos quando comparados aos produtos de maior receita, são produtos que variam entre $3 como o Eureka Disposable Bags for Sanitaire Vibra Groomer I Upright Vac e $19 tal como PNY Rapid USB Car Charger - Black. 
 
-## Existe uma relação entre o desempenho das lojas e as regiões em que estão localizadas?
+## 5.2 Existe uma relação entre o desempenho das lojas e as regiões em que estão localizadas?
 
 <div align="center">
 <img src="images/4. ranking_vendas_regiao.jpg" />
@@ -182,7 +179,7 @@ O gráfico mostra os produtos que geraram menor receita com os 10 itens de menor
 
 Ao analisar a venda por região, observa-se que a região Oeste apresenta um desempenho superior com $725 mil de vendas, seguida da região Leste com $679, há uma diferença significativa entre demais regiões, pois as duas primeiras representam a maior parte do faturamento. A Central que mostra $501 mil e por último a região Sul com $392 mil o menor valor de venda.
 
-## Principais Descobertas 
+# 6. Principais Descobertas 
 
 A retenção de clientes é baixa e instável ao longo do tempo e o principal desafio do negócio não é aquisição, mas recorrência e retenção. Alguns meses apresentam retenção média melhor, sugerindo influência de sazonalidade e há indícios de sazonalidade positiva, mas sem evidência causal clara. 
 
@@ -197,6 +194,66 @@ Diferenças regionais impactam fortemente os resultados, a localização pode se
 A SuperStore possui dados ricos e bom desempenho em produtos, regiões e segmentos específicos, porém enfrenta baixa retenção, alta concentração de receita e forte desigualdade regional. 
 
 O maior potencial de crescimento está em reter melhor os clientes atuais, especialmente aqueles já engajados, antes de focar apenas em aquisição.
+
+# 7. Recomendações de Ações  
+
+Para a questão de retenção baixa e inconsistente entre os cohorts podem ser tomadas ações com o objetivo de transformar picos pontuais em retenção recorrente:
+
+•	Desenvolver campanhas de recompra entre 30 e 90 dias após a primeira compra; 
+•	Realizar comunicação automatizada por meio de e-mail com cupom, no mês seguinte à compra; 
+•	Ofertar incentivos progressivos com desconto maior na segunda compra. 
+
+No caso da segmentação RFM é importante adotar algumas estratégias direcionadas com ação segmentada e não genérica.  
+
+Clientes Campeão (4%) para manter o melhor comportamento possível
+
+•	Criar programas de fidelidade; 
+•	Implementar benefícios exclusivos e acesso antecipado a produtos; 
+•	Criar estratégias para ofertar produtos com alto ticket médio.      
+   
+ Clientes Não Perder (1%) evitar perda de clientes de alta monetização com baixo esforço.
+ 
+•	Criar campanhas imediatas de recompra com cupom de validade curta; 
+•	Comunicação personalizada destacando produtos já comprados.
+      
+
+Fiéis (27%) e Fiéis Potencial (40%) é importante aumentar a frequência e ticket médio.
+
+•	Incentivar a recompra recorrente com desconto na 3ª compra; 
+•	Ofertar produtos de ticket médio e alto; 
+•	Proporcionar kits e combos personalizados com alto valor agregado. 
+      
+Novos Clientes (2%) e Promissores (1%) criar o hábito de compra
+
+•	Ofertas de produtos de ticket baixo;
+•	Incentivo claro à segunda compra;
+•	Comunicação educativa sobre o portfólio.
+      
+Risco (8%), Precisam Atenção (2%), Hibernando (2%) e Perdidos (10%) recuperar valor ou decidir descontinuação estratégica.
+
+•	Criar campanhas de reativação pontuais; 
+•	Avaliar custo-benefício para clientes perdidos;
+•	Realizar pesquisa para entender o motivo da inatividade. 
+
+Sobre o portfólio de produtos a receita está concentrada em poucos produtos, importante aumentar a quantidade de produtos com maior valor agregado
+
+•	Garantir estoque, visibilidade e promoção dos produtos líderes; 
+•	Realizar venda cruzada entre produtos líderes e intermediários; 
+•	Avaliar preço e promoção de produtos de baixa receita. 
+
+A respeito das vendas por região foi identificada desigualdade e uma solução pode ser aplicada é equilibrar desempenho regional e explorar potencial de crescimento.
+
+•	Manter e escalar estratégias das regiões Oeste e Leste;
+•	Investigar nas regiões Central e Sul o ticket médio, mix de produtos e volume de pedidos;
+•	Criar campanhas regionais específicas para preço e mix de produtos. 
+
+E por fim, quanto ao faturamento mensal e sazonalidade ocorre crescimento com alta volatilidade e algumas ações podem reduzir a dependência de picos e aumentar a previsibilidade. 
+
+•	Planejar campanhas para meses historicamente fracos, fevereiro, abril a agosto e outubro; 
+•	Replicar estratégias dos meses de pico, novembro e dezembro; 
+•	Monitorar indicadores de curto prazo como recompra, ticket médio e frequência. 
+
+A ação que causa o maior impacto financeiro para a SuperStore está em reter melhor os clientes existentes, especialmente aqueles com bom histórico de compra. A combinação de segmentação RFM, ações regionais e foco em recompra oferece o melhor custo-benefício para crescimento sustentável.
 
 
 
